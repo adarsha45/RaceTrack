@@ -21,7 +21,6 @@ class CreateCarsTable extends Migration
             // big int, it needs to be the same type as the automatically generated users.id key that laravel uses for
             // the "users" table.
             $table->foreign('user_id')->references('id')->on('users'); // Assign the FK
-
             $table->string('name', 255); // Defining the max length of the string here isn't strictly,
             //as 255 is the default, but we'll do it anyway.
             $table->string('make', 255);
